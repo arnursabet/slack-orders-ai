@@ -2,7 +2,7 @@
 
 # Kitchen Request Slack Bot
 
-A Slack bot that processes kitchen order requests from a specified channel, generates reports, and delivers them via Direct Messages (DMs). The user needs to provide the starting date from which the bot will process the messages.
+I currently live in a student house with 20 people, and we use a Slack workspace for communication. One of our channels is dedicated to ordering kitchen supplies, where residents post their requests. Currently, a person is responsible for going through the messages and placing the orders. To streamline this, I built a Slack bot that automates the process. The bot scans the channel for kitchen supply requests, compiles the items into an Excel spreadsheet, and sends it via Direct Message (DM). Users just need to provide a starting date, and the bot takes care of generating the report.
 
 ---
 
@@ -153,5 +153,16 @@ docker run -p 3000:3000 kitchen-bot
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+
+---
+
+## Reflection
+
+I encountered a few challenges while building this project:
+
+1. At first, I was gonna use DeepSeek API to extract the items from the messages, but I realized that it was not working as expected. So, I switched to OpenAI API.
+2. I had to handle different date formats and ensure the date is within the past 30 days.
+3. I had to generate an Excel spreadsheet with the extracted data. I used the `openpyxl` library to create the Excel file. At first, I was gonna use Google Sheets, but I realized that it is more convenient to send the file via DM.
+4. Even though the `OutputManager` class has only one method I decided to keep it this way in case I need to add more output formats in the future.
 
 ---
