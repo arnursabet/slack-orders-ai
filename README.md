@@ -1,5 +1,3 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/G2xRUaVe)
-
 # Kitchen Request Slack Bot
 
 I currently live in a student house with 20 people, and we use a Slack workspace for communication. One of our channels is dedicated to ordering kitchen supplies, where residents post their requests. Currently, a person is responsible for going through the messages and placing the orders. To streamline this, I built a Slack bot that automates the process. The bot scans the channel for kitchen supply requests, compiles the items into an Excel spreadsheet, and sends it via Direct Message (DM). Users just need to provide a starting date, and the bot takes care of generating the report.
