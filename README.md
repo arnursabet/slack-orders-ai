@@ -153,14 +153,3 @@ docker run -p 3000:3000 kitchen-bot
 5. Open a Pull Request
 
 ---
-
-## Reflection
-
-I encountered a few challenges while building this project:
-
-1. At first, I was gonna use DeepSeek API to extract the items from the messages, but I realized that it was not working as expected. So, I switched to OpenAI API.
-2. I had to handle different date formats and ensure the date is within the past 30 days.
-3. I had to generate an Excel spreadsheet with the extracted data. I used the `openpyxl` library to create the Excel file. At first, I was gonna use Google Sheets, but I realized that it is more convenient to send the file via DM.
-4. Even though the `OutputManager` class has only one method I decided to keep it this way in case I need to add more output formats in the future.
-
----
